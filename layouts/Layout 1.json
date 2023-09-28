@@ -119,8 +119,8 @@
 						"y": 680,
 						"width": 108,
 						"height": 103,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.9907407407407407,
+						"originY": 0.49514563106796117,
 						"color": [
 							1,
 							1,
@@ -253,7 +253,8 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
+						"zElevation": 0,
+						"blendMode": "additive"
 					}
 				},
 				{

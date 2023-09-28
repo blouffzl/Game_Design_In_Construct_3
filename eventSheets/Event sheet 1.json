@@ -1,5 +1,215 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 560885713295363
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Player",
+					"sid": 333519958741097,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 910351966923091
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 306665458787013,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 728636392663013,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "down"
+					}
+				}
+			],
+			"sid": 350859521272914
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 662867232135301,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 885125586235970,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "up"
+					}
+				}
+			],
+			"sid": 910559772947124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 885741232310343,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 204422879733587,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 229549587860805
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 907845261552174,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 245215198332692,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 585069746172069
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 524923624539876
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Player",
+					"sid": 655355179285772,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 134860727418785
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 338561385529803,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 686662725809174,
+					"parameters": {
+						"object": "Bullet",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": true
+					}
+				}
+			],
+			"sid": 602188189512380
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bullet",
+					"sid": 907724350003530,
+					"parameters": {
+						"object": "Monster"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Monster",
+					"sid": 809781386409494
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Bullet",
+					"sid": 925230969366795
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Bullet",
+					"sid": 896569027630431,
+					"parameters": {
+						"object": "Explosion",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": true
+					}
+				}
+			],
+			"sid": 641550456437199
+		}
+	],
 	"sid": 454382076396888
 }

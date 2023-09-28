@@ -8,6 +8,20 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -70,7 +84,9 @@
 			"Player",
 			"Monster",
 			"Bullet",
-			"Explosion"
+			"Explosion",
+			"Mouse",
+			"Keyboard"
 		],
 		"subfolders": []
 	},
