@@ -141,7 +141,9 @@
 						"live-preview": false
 					},
 					"uid": 4,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -168,7 +170,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 1.274160108170157,
 						"zElevation": 0
 					}
 				},
@@ -267,7 +269,9 @@
 						"live-preview": false
 					},
 					"uid": 7,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -294,7 +298,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 2.592190544000113,
 						"zElevation": 0
 					}
 				},
@@ -308,7 +312,9 @@
 						"live-preview": false
 					},
 					"uid": 8,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -323,8 +329,8 @@
 						}
 					},
 					"world": {
-						"x": 646,
-						"y": 606,
+						"x": 1100,
+						"y": 217,
 						"width": 145,
 						"height": 100,
 						"originX": 0.5,
@@ -335,7 +341,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 1.202267102269167,
 						"zElevation": 0
 					}
 				},
@@ -349,7 +355,9 @@
 						"live-preview": false
 					},
 					"uid": 9,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -364,8 +372,8 @@
 						}
 					},
 					"world": {
-						"x": 621,
-						"y": 771,
+						"x": 1235,
+						"y": 694,
 						"width": 145,
 						"height": 100,
 						"originX": 0.5,
@@ -376,7 +384,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 2.5861250264641593,
 						"zElevation": 0
 					}
 				},
@@ -390,7 +398,9 @@
 						"live-preview": false
 					},
 					"uid": 10,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -405,9 +415,9 @@
 						}
 					},
 					"world": {
-						"x": 411,
-						"y": 416,
-						"width": 145,
+						"x": 404,
+						"y": 338,
+						"width": 152,
 						"height": 100,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -417,7 +427,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 2.83998103172459,
 						"zElevation": 0
 					}
 				},
@@ -431,7 +441,9 @@
 						"live-preview": false
 					},
 					"uid": 11,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -458,7 +470,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 4.560814129888432,
 						"zElevation": 0
 					}
 				},
@@ -472,7 +484,9 @@
 						"live-preview": false
 					},
 					"uid": 12,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"Health": 5
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -499,7 +513,7 @@
 							1,
 							1
 						],
-						"angle": 0,
+						"angle": 3.899946216419126,
 						"zElevation": 0
 					}
 				}
@@ -523,6 +537,84 @@
 			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "HUD",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Text",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 20,
+						"line-height": 0,
+						"bold": true,
+						"italic": true,
+						"color": [
+							0.9058823529411765,
+							0.9215686274509803,
+							0.0196078431372549,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 15,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 149,
+						"y": 25,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 985211830100231,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
