@@ -17,7 +17,13 @@
 						"image-offset-y": 0,
 						"image-scale-x": 1,
 						"image-scale-y": 1,
-						"image-angle": 0
+						"image-angle": 0,
+						"enable-tile-randomization": false,
+						"x-random": 1,
+						"y-random": 1,
+						"angle-random": 1,
+						"blend-margin-x": 0.1,
+						"blend-margin-y": 0.1
 					},
 					"uid": 0,
 					"instanceVariables": {},
@@ -159,9 +165,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -205,9 +208,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -243,7 +243,7 @@
 					"behaviors": {
 						"Movement": {
 							"properties": {
-								"speed": 300,
+								"speed": 80,
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": true,
@@ -251,9 +251,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -297,9 +294,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -343,9 +337,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -389,9 +380,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -435,9 +423,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -481,9 +466,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -527,9 +509,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -573,9 +552,6 @@
 								"step": false,
 								"enabled": true
 							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
 						}
 					},
 					"world": {
@@ -673,7 +649,7 @@
 				{
 					"type": "UI_text",
 					"properties": {
-						"text": "Text",
+						"text": "Score",
 						"enable-bbcode": false,
 						"font": "Arial",
 						"size": 14.25,
@@ -689,8 +665,10 @@
 						"horizontal-alignment": "left",
 						"vertical-alignment": "top",
 						"wrapping": "word",
+						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left"
+						"origin": "top-left",
+						"read-aloud": false
 					},
 					"uid": 14,
 					"instanceVariables": {},
@@ -700,48 +678,6 @@
 						"y": 2,
 						"width": 636,
 						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "GameOverText",
-					"properties": {
-						"text": "Game Over!  Returning to the title screen",
-						"enable-bbcode": false,
-						"font": "Arial",
-						"size": 24,
-						"line-height": 0,
-						"bold": true,
-						"italic": true,
-						"color": [
-							1,
-							0.800000011920929,
-							0.6000000238418579,
-							0
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 15,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 182,
-						"y": 143,
-						"width": 268,
-						"height": 147,
 						"originX": 0,
 						"originY": 0,
 						"color": [

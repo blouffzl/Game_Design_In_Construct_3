@@ -17,11 +17,6 @@
 			"behaviorId": "Bullet",
 			"name": "Movement",
 			"sid": 392444573116681
-		},
-		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 137206347934180
 		}
 	],
 	"effectTypes": [],
@@ -62,7 +57,8 @@
 								"y": -0.00980392156862745
 							}
 						],
-						"duration": 1
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 134178707653074,

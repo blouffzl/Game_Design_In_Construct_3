@@ -2,20 +2,6 @@
 	"name": "MainGame_event",
 	"events": [
 		{
-			"eventType": "comment",
-			"text": "Original code take from : https://www.construct.net/en/tutorials/beginners-guide-construct-1/page-9\nCredit to @Ashley & @Tom from the Construct3 team\n\nCoding and comments modified by @BroganPratt for educational use"
-		},
-		{
-			"eventType": "variable",
-			"name": "MonsterSpeed",
-			"type": "number",
-			"initialValue": "80",
-			"comment": "The speed that monsters spawn initially with",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 366059842267578
-		},
-		{
 			"eventType": "variable",
 			"name": "Score",
 			"type": "number",
@@ -45,15 +31,6 @@
 					"sid": 731458007524144,
 					"parameters": {
 						"angle": "random(360)"
-					}
-				},
-				{
-					"id": "set-visible",
-					"objectClass": "GameOverText",
-					"sid": 769154193216466,
-					"disabled": true,
-					"parameters": {
-						"visibility": "invisible"
 					}
 				},
 				{
@@ -101,19 +78,6 @@
 					"parameters": {
 						"text": "\"Score: \" & Score & newline & \"Use arrow keys to move and click to shoot!\""
 					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 582157446851135,
-					"parameters": {
-						"object-to-create": "GreenMonster",
-						"layer": "\"Main\"",
-						"x": "0",
-						"y": "random(1024)",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
 				}
 			],
 			"sid": 714743478425692,
@@ -126,12 +90,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "for-each",
+							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 727333075722776,
-							"parameters": {
-								"object": "GreenMonster"
-							}
+							"sid": 791944302648281
 						}
 					],
 					"actions": [
@@ -150,41 +111,9 @@
 			]
 		},
 		{
-			"eventType": "comment",
-			"text": "Every 3 seconds, spawn a new monster off to the right of the layout, increase speed by 5"
-		},
-		{
 			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 487371899603229,
-					"parameters": {
-						"interval-seconds": "3"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 143981939032507,
-					"parameters": {
-						"variable": "MonsterSpeed",
-						"value": "5"
-					}
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "GreenMonster",
-					"sid": 955609403131356,
-					"behaviorType": "Movement",
-					"parameters": {
-						"speed": "MonsterSpeed"
-					}
-				}
-			],
+			"conditions": [],
+			"actions": [],
 			"sid": 123871258428291
 		},
 		{
@@ -241,15 +170,6 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 544609309979931,
-					"parameters": {
-						"variable": "MonsterSpeed",
-						"value": "1"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
 					"sid": 382858770022182,
 					"parameters": {
 						"variable": "Score",
@@ -300,15 +220,6 @@
 					"sid": 147509339509199,
 					"parameters": {
 						"angle": "random(360)"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 998131744183269,
-					"parameters": {
-						"variable": "Score",
-						"value": "GreenMonster.Movement.Speed"
 					}
 				}
 			],
@@ -396,14 +307,93 @@
 				{
 					"id": "set-enabled",
 					"objectClass": "Player",
-					"sid": 647403389382168,
+					"sid": 651970261206324,
 					"behaviorType": "8Direction",
 					"parameters": {
-						"state": "disabled"
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 683998841767797
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 320904173814206,
+					"parameters": {
+						"layout": "Game Over"
 					}
 				}
 			],
 			"sid": 627827915954067
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 466869174536932,
+					"parameters": {
+						"interval-seconds": "3.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 825333406247097,
+					"parameters": {
+						"object-to-create": "GreenMonster",
+						"layer": "0",
+						"x": "LayoutWidth + 100",
+						"y": "random (LayoutHeight)",
+						"create-hierarchy": true,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 401304844037040
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "GreenMonster",
+					"sid": 194732530683456,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 958396133616180
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "GreenMonster",
+					"sid": 691436038361146
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "GreenMonster",
+					"sid": 583152481903559,
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"sid": 251349551532820
 		}
 	],
 	"sid": 226908219882659
